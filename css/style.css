@@ -6,28 +6,109 @@
     font-weight:bold;
 }
 /* CONTAINER MAIN */
-
 .container-main{
+    align-items: end;
+    flex-direction: column;
+    overflow: auto;
     display: flex;
     width: 100%;
-    height:90vh;
+    min-height:100vh;
     background-color:#141922;
+    
+}
+.container-content{
+    overflow: scroll;
+    position: fixed;
+    top:5rem;
+    left: 16rem;
+    width: 86.5%;
+    height: 90vh;
+}
+.menu{
+    color:#6D6D6D ;
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+.title{
+    
+    color: white;
+    font-size: 1.3rem;
+    padding: 1rem;
+}
+.option{
+    margin: 1rem;
+}
+.album{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.popular-artist{
+    margin-bottom: 10rem;
 }
 
 /* container-left */
 .container-left{
+    position:fixed;
+    top: 0;
+    left: 0;
     color:#6D6D6D ;
-    display: flex;
-    flex-direction: column;
     width: 16rem;
     background-color: black;
-
 }
+
 .logo{
     display: flex;
     width: 100%;
-
 }
+.album{
+    color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+.canvas{
+    top: 10rem;
+    margin-left: 2%;
+    width:14%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/youg.jpeg);
+    background-size: cover;
+    border-radius: 50%;
+    height: 90%;
+    width: 100%;
+}
+
+.circle img{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+.canvas span{
+    margin: 0.5rem;
+}
+.artis {
+    color: #6D6D6D;
+    font-size: 0.8rem;
+}
+
+.Subtitle{
+    color: #6D6D6D;
+    font-size: 0.8rem;
+}
+
 .logo img{
     padding-top: 1rem;
     width: 70%;
@@ -41,7 +122,6 @@
     flex-direction: column;
     padding: 1rem 0 0 1rem;
     width: 100%;
-
 }
 
 .fa-solid{
@@ -53,7 +133,6 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-
     padding: 1rem;
 }
 .playlist h4{
@@ -69,11 +148,12 @@
 .fa-square-plus{
     font-size: 3rem;
 }
+
 ul{
     color:#6D6D6D ;
     list-style: none;
     line-height: 2rem;
-    margin-bottom: 7rem;
+    margin-bottom: 9rem;
 }
 
 .user{
@@ -98,13 +178,14 @@ hr{
 
 /* container-upgrade */
 .container-up{
+    position: fixed;
+    top: 0;
     display: flex;
     background-color:#080B12 ;
-    width: 90%;
+    width: 100%;
     height: 5rem;
     align-items: center;
     justify-content: end;
-
 }
 
 .container-up button{
@@ -124,8 +205,10 @@ hr{
 
 /* container play-bar */
 .container-play{
+    left: 0;
+    position: fixed;
+    bottom: 0;
     display: flex;
-    position: sticky;
     width: 100%;
     height: 10vh;
     background-color: #282828;
@@ -142,21 +225,23 @@ hr{
     object-fit: contain;
 }
 .song-name{
-    
     flex-direction: column;
     display: flex;
     justify-content: center;
-    width: 6%;
+    width: 5%;
     height: 100%;
 }
+
 #group{
     color: white;
     font-size: 0.9rem;
 }
+
 #title{
     color: #6D6D6D;
     font-size: 0.7rem;
 }
+
 /* like e save */
 .save{
     display: flex;
@@ -170,18 +255,19 @@ hr{
 .fa-folder{
     padding: 1rem;
 }
+
 /* player */
 .container-player{
-    margin-left: 10rem;
     display: flex;
     flex-direction: column;
     align-content: center;
     align-items: center;
-    width: 50%;
+    width: 70%;
     height: 100%;
     
 }
 .play-pause{
+    margin-bottom: 0.5rem;
     color: white;
     display: flex;
     justify-content: center;
@@ -192,7 +278,6 @@ hr{
 .play-bar{
     width: 100%;
     height: 50%;
-    background-color: azure;
 }
 
 .fa-circle-play{
@@ -201,10 +286,11 @@ hr{
 }
 
 .player-bar{
+    margin-top: 0.5rem;
     align-items: center;
     display: flex;
     font-size: 0.8rem;
-    width:70% ;
+    width:60% ;
 }
 .line{
     border-radius: 30px;
@@ -220,13 +306,60 @@ hr{
     margin-right: 3rem;
     width: 3%;
 }
+/* volume container */
+
+.volume-container{
+    color: #6D6D6D;
+    display: flex;
+    width: 15%;
+    height: 100%;
+}
+
+.icon-display{
+    display: flex;
+    align-items: center;
+    width: 35%;
+    height: 100%;
+}
+
+.volume{
+    display: flex;
+    align-items: center;
+    width: 65%;
+}
+
+.line-volume{
+    border-radius: 30px;
+    height: 0.3rem;
+    width: 60%;
+    background: rgb(193,193,193);
+    background: linear-gradient(90deg, rgba(193,193,193,1) 25%, rgba(90,90,90,1) 25%);
+}
+
+
 /* hover */
 
 .white:hover{
     color: white;
 }
 
+
 .grow:hover {
     transform: scale(1.1);
 }
+
+.option:hover{
+    border-bottom :solid 0.2rem chartreuse;
+}
+
+
+.left:hover{
+    border-left:solid 0.2rem chartreuse ;
+}
+
+
+.logo:hover{
+    filter: brightness(0) saturate(100%) invert(54%) sepia(84%) saturate(438%) hue-rotate(88deg) brightness(89%) contrast(93%);
+}
+
 
