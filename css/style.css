@@ -118,6 +118,7 @@
 }
 
 .logo{
+    justify-content: flex-start;
     display: flex;
     width: 100%;
 }
@@ -133,6 +134,7 @@
 .navbar-left{
     display: flex;
     flex-direction: column;
+   
     padding: 0.5rem 0 0 0.5rem;
     width: 100%;
 }
@@ -143,11 +145,23 @@
 }
 
 .playlist{
+    
     display: flex;
     flex-direction: column;
     width: 100%;
     padding: 1rem;
+    height: 60%;
 }
+.list-name{
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width:none ;
+}
+
+.list-name::-webkit-scrollbar{
+    display: none;
+}
+
 .playlist h4{
     color: white;
 }
@@ -170,8 +184,8 @@ ul{
 }
 
 .user{
-    position: absolute;
-    bottom: 0;
+    
+    margin-top: 2.5rem;
     color:#6D6D6D ;
     width: 100%;
     padding:0 1rem;
@@ -274,6 +288,7 @@ hr{
 
 /* player */
 .container-player{
+    margin-top: 0.5rem;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -283,7 +298,7 @@ hr{
     
 }
 .play-pause{
-    margin-bottom: 0.5rem;
+    margin-bottom:;
     color: white;
     display: flex;
     justify-content: center;
@@ -309,12 +324,24 @@ hr{
     width:70% ;
 }
 .line{
-    border-radius: 30px;
-    height: 0.3rem;
-    width: 90%;
-    background: rgb(193,193,193);
-    background: linear-gradient(90deg, rgba(193,193,193,1) 25%, rgba(90,90,90,1) 25%);
+    -webkit-appearance: none;
+    width: 100%;
+    background: white;
+    outline: none;
+    height: 6px;
+    border-radius: 12px;
+    cursor: pointer;
 }
+
+.line::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: rgb(30, 215, 96);
+    
+    }
+
 
 .min{
     color: white;
@@ -340,7 +367,7 @@ hr{
     height: 100%;
 }
 
-.volume{
+.right-volume{
     display: flex;
     align-items: center;
     justify-content: end;
@@ -348,16 +375,30 @@ hr{
     width: 50%;
 }
 
-.line-volume{
-    border-radius: 30px;
-    height: 0.3rem;
-    width: 40%;
-    background: rgb(193,193,193);
-    background: linear-gradient(90deg, rgba(193,193,193,1) 25%, rgba(90,90,90,1) 25%);
+.volume{
+    -webkit-appearance: none;
+    width: 100%;
+    background: white;
+    outline: none;
+    height: 6px;
+    border-radius: 12px;
+    cursor: pointer;
 }
 
+.volume::-webkit-slider-thumb{
+-webkit-appearance: none;
+width: 0;
+height: 0;
+background: rgb(30, 215, 96);
+}
 
 /* hover */
+
+.volume:hover::-webkit-slider-thumb{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
 
 .cover:hover .fa-circle-play{
     display: block;
@@ -374,7 +415,7 @@ hr{
 
 
 .grow:hover {
-    color:rgb(30, 215, 96) ;
+    
     transform: scale(1.1);
 }
 
