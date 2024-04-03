@@ -21,7 +21,7 @@
     overflow: scroll;
     position: fixed;
     top:5rem;
-    left: 16rem;
+    left: 14rem;
     width: 86.5%;
     height: 90vh;
   
@@ -112,7 +112,7 @@
     top: 0;
     left: 0;
     color:#6D6D6D ;
-    width: 16rem;
+    width: 14rem;
     height:calc(100% - 6rem);
     background-color: black;
 }
@@ -438,8 +438,18 @@ background: rgb(30, 215, 96);
     .album{
         width:calc(100% / 2 +1rem )
     }
- 
+
+    
+    .navbar-left img{
+        display: none;
+    }
+
+    .small-logo{
+        display: none;
+    }
 }
+
+
 
 @media screen and (max-width:969px){
 
@@ -457,6 +467,7 @@ background: rgb(30, 215, 96);
     }
 
     .small-logo{
+        display: block;
         width: 40%;
         margin: 0.5rem 0 0 0.6rem;
         filter: brightness(0) saturate(100%) invert(54%) sepia(84%) saturate(438%) hue-rotate(88deg) brightness(89%) contrast(93%);
@@ -474,6 +485,7 @@ background: rgb(30, 215, 96);
     }
     
     .little img{
+        display: block;
         width: 60%;
         margin: rem 0 0 1rem;
     }
@@ -481,19 +493,22 @@ background: rgb(30, 215, 96);
     .container-left{
         display: flex;
         flex-direction: column;
-        width: 10%;
+        width: 3rem;
         position: fixed;
        
     }
 
-    .container-content{
-        left: 6rem;
-    }
+   .container-content{
+    position: absolute;
+    left: 3rem;
+   }
+    
+   }
 
     .menu{
         margin-left: 2rem;
         flex-wrap: wrap;
-        justify-content: left;
+        justify-content: center;
     }
 
     .save{
@@ -502,6 +517,7 @@ background: rgb(30, 215, 96);
     .min{
         width: 10%;
     }
+
 
     .user{
         display: none;
